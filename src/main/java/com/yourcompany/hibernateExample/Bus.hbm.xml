@@ -1,0 +1,13 @@
+<hibernate-mapping>
+    <class name="com.yourcompany.hibernateExample.logic.Bus" table="busses">
+        <id column="bus_id" name="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property colum="number" name="number" type="java.lang.String"/>
+
+        <set name="drivers" table="busDriver" lazy="false">
+            <key colum="bus_id"/>
+            <many-to-many colum="driver_id" class="com.yourcompany.hibernateExample.logic.Driver"/>
+        </set>
+    </class>
+</hibernate-mapping>

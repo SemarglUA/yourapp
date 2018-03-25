@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.yourcompany.sbjsp.model.ViewsEntity" table="VIEWS" schema="information_schema">
+        <property name="tableCatalog">
+            <column name="TABLE_CATALOG" sql-type="varchar(512)" length="512"/>
+        </property>
+        <property name="tableSchema">
+            <column name="TABLE_SCHEMA" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="tableName">
+            <column name="TABLE_NAME" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="viewDefinition">
+            <column name="VIEW_DEFINITION" sql-type="longtext"/>
+        </property>
+        <property name="checkOption">
+            <column name="CHECK_OPTION" sql-type="varchar(8)" length="8"/>
+        </property>
+        <property name="isUpdatable">
+            <column name="IS_UPDATABLE" sql-type="varchar(3)" length="3"/>
+        </property>
+        <property name="definer">
+            <column name="DEFINER" sql-type="varchar(93)" length="93"/>
+        </property>
+        <property name="securityType">
+            <column name="SECURITY_TYPE" sql-type="varchar(7)" length="7"/>
+        </property>
+        <property name="characterSetClient">
+            <column name="CHARACTER_SET_CLIENT" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="collationConnection">
+            <column name="COLLATION_CONNECTION" sql-type="varchar(32)" length="32"/>
+        </property>
+    </class>
+</hibernate-mapping>
